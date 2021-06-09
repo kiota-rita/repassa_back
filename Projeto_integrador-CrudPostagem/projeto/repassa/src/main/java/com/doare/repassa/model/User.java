@@ -32,9 +32,9 @@ public class User {
 	
 	private String foto;
 	
-	@OneToMany(mappedBy = "email", cascade = CascadeType.REMOVE)
-	@JsonIgnoreProperties("email")
-	private List<Postagem> postagem;
+	@OneToMany(mappedBy = "email", cascade = CascadeType.REMOVE) //talvez dê errado
+	@JsonIgnoreProperties("email") //talvez dê errado
+	private List<Postagem> postagem; //talvez dê errado
 
 	public String getDescricao() {
 		return descricao;
