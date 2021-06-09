@@ -45,9 +45,10 @@ public class UserController {
     public ResponseEntity<User> GetById(@PathVariable long id) {
         return repository.findById(id).map(resp -> ResponseEntity.ok(resp)).orElse(ResponseEntity.notFound().build());
     }
-	
+
 	@PutMapping("/cadastrar")
 	public ResponseEntity<User> put(@RequestBody User email) {
 		return ResponseEntity.status(HttpStatus.CREATED).body(userService.AtualizarUsuario(email));
 	}
+
 }
