@@ -26,17 +26,18 @@ public class Postagem {
 	@GeneratedValue(strategy = GenerationType.IDENTITY) // chave primaria e auto incremente
 	private long id;
 	
-	@URL
-	@Size(min = 1, max =500)
-	private String img1; //Link que será add no front-end
-	
-	@URL
-	@Size(min = 1, max =500)
-	private String img2; //Link que será add no front-end
 
+	@Size(min = 1, max =500)
+	private String titulo; //Link que será add no front-end
+	
+	
 	@NotNull
 	@Size(min = 1, max =500)
-	private String conteudo;
+	private String texto;
+	
+	
+	@Size(min = 1, max =500)
+	private String img; //Link que será add no front-end
 		
 	
 	@Temporal(TemporalType.TIMESTAMP) //data e hora é armazenada no momento da postagem
@@ -51,72 +52,65 @@ public class Postagem {
 	@JsonIgnoreProperties("postagem")
 	private User email;
 	
+	
+
 	public long getId() {
 		return id;
 	}
-
 
 	public void setId(long id) {
 		this.id = id;
 	}
 
-
-	public String getImg1() {
-		return img1;
+	public String getTitulo() {
+		return titulo;
 	}
 
-
-	public void setImg1(String img1) {
-		this.img1 = img1;
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
 	}
 
-
-	public String getImg2() {
-		return img2;
+	public String getTexto() {
+		return texto;
 	}
 
-
-	public void setImg2(String img2) {
-		this.img2 = img2;
+	public void setTexto(String texto) {
+		this.texto = texto;
 	}
 
-
-	public String getConteudo() {
-		return conteudo;
+	public String getImg() {
+		return img;
 	}
 
-
-	public void setConteudo(String conteudo) {
-		this.conteudo = conteudo;
+	public void setImg(String img) {
+		this.img = img;
 	}
 
 	public Date getData() {
 		return data;
 	}
 
-
 	public void setData(Date data) {
 		this.data = data;
 	}
-
 
 	public Tema getTema() {
 		return tema;
 	}
 
-
 	public void setTema(Tema tema) {
 		this.tema = tema;
 	}
-
 
 	public User getEmail() {
 		return email;
 	}
 
-
 	public void setEmail(User email) {
 		this.email = email;
 	}
 
+	
+	
 }
+	
