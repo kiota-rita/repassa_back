@@ -48,7 +48,7 @@ public class UserController {
 
 	@PutMapping("/cadastrar")
 	public ResponseEntity<User> put(@RequestBody User email) {
-		return ResponseEntity.status(HttpStatus.CREATED).body(userService.AtualizarUsuario(email));
+		return ResponseEntity.status(HttpStatus.CREATED).body(userService.atualizarUsuario(email));
 	}
 
 }
