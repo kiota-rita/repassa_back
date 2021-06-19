@@ -12,7 +12,7 @@ Acesse aqui: [repassa](https://repassa.netlify.app)
 * Front end: Angular + Typescript + Bootstrap
 * Back end: API restful em Spring boot, Java 11
 * Banco de dados: MySQL
-* Link para o repositório back end: [repassa - Backend](https://github.com/kiota-rita/repassa_front)
+* Link para o repositório back end: [repassa - Frontend](https://github.com/kiota-rita/repassa_front)
 
 ### 🕹 Como utilizar:
 **Configurações Iniciais:**
